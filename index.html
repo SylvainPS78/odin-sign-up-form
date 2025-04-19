@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Create your Odin Project account. Join our community of developers to learn programming and web development."
+    />
+    <link href="./css/style.css" rel="stylesheet" type="text/css" />
+
+    <title>Odin Project Sign Up Form</title>
+  </head>
+  <body>
+    <div class="page">
+      <aside class="page__sidebar sidebar" role="complementary">
+        <div class="sidebar__logo logo">
+          <img
+            class="logo__image"
+            src="./design/odin-lined.png"
+            alt="Odin logo"
+            width="380px"
+            height="508px"
+          />
+          <h1 class="logo__title">ODIN</h1>
+        </div>
+        <div class="sidebar__image image">
+          <img
+            class="image__element"
+            src="./design/halie-west-25xggax4bSA-unsplash.jpg"
+            alt="Background image of a fern"
+            aria-describedby="image-caption"
+            width="1862px"
+            height="2792px"
+          />
+          <p class="image__caption" id="image-caption">
+            Photo by
+            <a class="image__link" href="https://unsplash.com/@haliewestphoto"
+              >Halie West</a
+            >
+            on
+            <a class="image__link" href="https://unsplash.com/">Unsplash</a>
+          </p>
+        </div>
+      </aside>
+
+      <main class="page__main main" role="main">
+        <section class="main__text text">
+          <p class="text__disclaimer">
+            This is not a real online service!<br />
+            You know you need something like this in your life to help you
+            realize your deepest dreams. Sign up now to get started.
+          </p>
+          <p class="text__call-to-action">You know you want to.</p>
+        </section>
+        <section class="main__form-section form-section">
+          <h2 class="form-section__title">Let's do this!</h2>
+          <form
+            class="form-section__form form"
+            action="#"
+            method="POST"
+            role="form"
+            aria-label="Sign Up Form"
+          >
+            <div class="form__row">
+              <div class="form__group">
+                <label for="first_name" class="form__label">FIRST NAME</label>
+                <input
+                  type="text"
+                  class="form__input"
+                  id="first_name"
+                  name="first_name"
+                  autocomplete="given-name"
+                  placeholder="Ex: John"
+                  aria-describedby="first-name-error"
+                  pattern="[A-Za-z]{1,}"
+                  required
+                />
+                <span
+                  id="first-name-error"
+                  class="form__error-message"
+                  aria-live="polite"
+                ></span>
+              </div>
+              <div class="form__group">
+                <label for="last_name" class="form__label">LAST NAME</label>
+                <input
+                  type="text"
+                  class="form__input"
+                  id="last_name"
+                  name="last_name"
+                  autocomplete="family-name"
+                  placeholder="Ex: Doe"
+                  aria-describedby="last-name-error"
+                  pattern="[A-Za-z]{1,}"
+                  required
+                />
+                <span
+                  id="last-name-error"
+                  class="form__error-message"
+                  aria-live="polite"
+                ></span>
+              </div>
+            </div>
+            <div class="form__row">
+              <div class="form__group">
+                <label for="email" class="form__label">EMAIL</label>
+                <input
+                  type="email"
+                  class="form__input"
+                  id="email"
+                  name="email"
+                  autocomplete="email"
+                  placeholder="example@example.com"
+                  aria-describedby="email-error"
+                  required
+                />
+                <span
+                  id="email-error"
+                  class="form__error-message"
+                  aria-live="assertive"
+                ></span>
+              </div>
+              <div class="form__group">
+                <label for="phone_number" class="form__label"
+                  >PHONE NUMBER</label
+                >
+                <input
+                  type="tel"
+                  class="form__input"
+                  id="phone_number"
+                  name="phone_number"
+                  aria-describedby="phone-error phone-hint"
+                  pattern="[0-9]{10}"
+                  minlength="10"
+                  maxlength="10"
+                  autocomplete="tel"
+                  required
+                />
+                <span id="phone-hint" class="form__hint"
+                  >Format: 1234567890 (10 digits)</span
+                >
+                <span
+                  id="phone-error"
+                  class="form__error-message"
+                  aria-live="polite"
+                ></span>
+              </div>
+            </div>
+            <div class="form__row">
+              <div class="form__group">
+                <label for="password" class="form__label">PASSWORD</label>
+                <input
+                  type="password"
+                  class="form__input"
+                  id="password"
+                  name="password"
+                  aria-describedby="password-error password-requirements"
+                  pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$"
+                  autocomplete="new-password"
+                  required
+                />
+                <span id="password-requirements" class="form__hint">
+                  Password must be at least 8 characters long, include numbers
+                  and letters
+                </span>
+                <span
+                  id="password-error"
+                  class="form__error-message"
+                  aria-live="polite"
+                ></span>
+              </div>
+              <div class="form__group">
+                <label for="confirm_password" class="form__label"
+                  >CONFIRM PASSWORD</label
+                >
+                <input
+                  type="password"
+                  class="form__input"
+                  id="confirm_password"
+                  name="confirm_password"
+                  aria-describedby="confirm-password-error"
+                  autocomplete="new-password"
+                  required
+                />
+                <span
+                  id="confirm-password-error"
+                  class="form__error-message"
+                  aria-live="assertive"
+                ></span>
+              </div>
+            </div>
+            <button
+              type="submit"
+              class="form__button"
+              aria-label="Create new account"
+            >
+              Create Account
+            </button>
+          </form>
+          <div class="form-section__login login">
+            <p class="login__text">
+              Already have an account?
+              <a
+                class="login__link"
+                href="#"
+                aria-label="Log in to your existing account"
+                role="button"
+              >
+                Log in
+              </a>
+            </p>
+          </div>
+        </section>
+      </main>
+    </div>
+    <script src="./js/script.js" defer></script>
+  </body>
+</html>
