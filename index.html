@@ -71,6 +71,7 @@
             action="#"
             method="POST"
             aria-label="Sign Up Form"
+            novalidate
           >
             <div class="form__row">
               <div class="form__group">
@@ -87,7 +88,7 @@
                   required
                 />
                 <span
-                  id="first-name-error"
+                  id="first_name-error"
                   class="form__error-message"
                   aria-live="polite"
                   >First name is required</span
@@ -107,7 +108,7 @@
                   required
                 />
                 <span
-                  id="last-name-error"
+                  id="last_name-error"
                   class="form__error-message"
                   aria-live="polite"
                   >Last name is required</span
@@ -145,13 +146,14 @@
                   name="phone_number"
                   aria-describedby="phone-error"
                   pattern="[0-9]{10}"
+                  placeholder="Ex: 1234567890"
                   minlength="10"
                   maxlength="10"
                   autocomplete="tel"
                   required
                 />
                 <span
-                  id="phone-error"
+                  id="phone_number-error"
                   class="form__error-message"
                   aria-live="polite"
                   >Valid phone number required</span
@@ -167,7 +169,7 @@
                   id="password"
                   name="password"
                   aria-describedby="password-error"
-                  pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$"
+                  minlength="8"
                   autocomplete="new-password"
                   required
                 />
@@ -176,9 +178,8 @@
                   class="form__error-message"
                   aria-live="polite"
                 >
-                  Password must be at least 8 characters long<br />
-                  include numbers and letters</span
-                >
+                  Password must be at least 8 characters long<br
+                /></span>
               </div>
               <div class="form__group">
                 <label for="confirm_password" class="form__label"
@@ -194,7 +195,7 @@
                   required
                 />
                 <span
-                  id="confirm-password-error"
+                  id="confirm_password-error"
                   class="form__error-message"
                   aria-live="assertive"
                   >Passwords must match</span
