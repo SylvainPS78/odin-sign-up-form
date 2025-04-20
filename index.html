@@ -35,11 +35,22 @@
           />
           <p class="image__caption" id="image-caption">
             Photo by
-            <a class="image__link" href="https://unsplash.com/@haliewestphoto"
-              >Halie West</a
+            <a
+              class="image__link"
+              href="https://unsplash.com/@haliewestphoto"
+              target="_blanck"
+              rel="noopener noreferrer"
+            >
+              Halie West</a
             >
             on
-            <a class="image__link" href="https://unsplash.com/">Unsplash</a>
+            <a
+              class="image__link"
+              href="https://unsplash.com/"
+              target="_blanck"
+              rel="noopener noreferrer"
+              >Unsplash</a
+            >
           </p>
         </div>
       </aside>
@@ -51,7 +62,7 @@
             You know you need something like this in your life to help you
             realize your deepest dreams. Sign up now to get started.
           </p>
-          <p class="text__call-to-action">You know you want to.</p>
+          <p class="text__call-to-action">You <em>know</em> you want to.</p>
         </section>
         <section class="main__form-section form-section">
           <h2 class="form-section__title">Let's do this!</h2>
@@ -79,7 +90,8 @@
                   id="first-name-error"
                   class="form__error-message"
                   aria-live="polite"
-                ></span>
+                  >First name is required</span
+                >
               </div>
               <div class="form__group">
                 <label for="last_name" class="form__label">LAST NAME</label>
@@ -98,7 +110,8 @@
                   id="last-name-error"
                   class="form__error-message"
                   aria-live="polite"
-                ></span>
+                  >Last name is required</span
+                >
               </div>
             </div>
             <div class="form__row">
@@ -118,7 +131,8 @@
                   id="email-error"
                   class="form__error-message"
                   aria-live="assertive"
-                ></span>
+                  >Valid email address required</span
+                >
               </div>
               <div class="form__group">
                 <label for="phone_number" class="form__label"
@@ -129,21 +143,19 @@
                   class="form__input"
                   id="phone_number"
                   name="phone_number"
-                  aria-describedby="phone-error phone-hint"
+                  aria-describedby="phone-error"
                   pattern="[0-9]{10}"
                   minlength="10"
                   maxlength="10"
                   autocomplete="tel"
                   required
                 />
-                <span id="phone-hint" class="form__hint"
-                  >Format: 1234567890 (10 digits)</span
-                >
                 <span
                   id="phone-error"
                   class="form__error-message"
                   aria-live="polite"
-                ></span>
+                  >Valid phone number required</span
+                >
               </div>
             </div>
             <div class="form__row">
@@ -154,20 +166,19 @@
                   class="form__input"
                   id="password"
                   name="password"
-                  aria-describedby="password-error password-requirements"
+                  aria-describedby="password-error"
                   pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$"
                   autocomplete="new-password"
                   required
                 />
-                <span id="password-requirements" class="form__hint">
-                  Password must be at least 8 characters long, include numbers
-                  and letters
-                </span>
                 <span
                   id="password-error"
                   class="form__error-message"
                   aria-live="polite"
-                ></span>
+                >
+                  Password must be at least 8 characters long<br />
+                  include numbers and letters</span
+                >
               </div>
               <div class="form__group">
                 <label for="confirm_password" class="form__label"
@@ -186,7 +197,8 @@
                   id="confirm-password-error"
                   class="form__error-message"
                   aria-live="assertive"
-                ></span>
+                  >Passwords must match</span
+                >
               </div>
             </div>
             <button
@@ -197,6 +209,7 @@
               Create Account
             </button>
           </form>
+
           <div class="form-section__login login">
             <p class="login__text">
               Already have an account?
