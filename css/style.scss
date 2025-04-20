@@ -11,7 +11,7 @@
 
 @media (prefers-reduced-motion: no-preference) {
   html {
-    interpolate-size: allow-keywords;
+    scroll-behavior: smooth;
   }
 }
 
@@ -281,6 +281,7 @@ body {
 
   &__error-message {
     visibility: hidden;
+    margin-top: 5px;
   }
 
   &__label {

@@ -23,6 +23,7 @@ const confirmPasswordCheck = () => {
 
 const errorMessageDisplay = () => {
   const formInputs = document.querySelectorAll("input");
+  const redBorder = "#e63946";
 
   formInputs.forEach((input) => {
     const inputName = input.name;
@@ -33,6 +34,8 @@ const errorMessageDisplay = () => {
       errorMessage.textContent = `This field is required`;
       errorMessage.style.visibility = "visible";
       input.setAttribute("aria-invalid", "true");
+      input.style.borderColor = redBorder;
+      input.style.boxShadow = `1px 1px 4px 0 ${redBorder}`;
     } else if (!input.checkValidity()) {
       switch (inputName) {
         case "first_name":
@@ -56,8 +59,8 @@ const errorMessageDisplay = () => {
       }
       errorMessage.style.visibility = "visible";
       input.setAttribute("aria-invalid", "true");
-      input.style.borderColor = "$red-border";
-      input.style.boxShadow = "1px 1px 4px 0 $red-border";
+      input.style.borderColor = redBorder;
+      input.style.boxShadow = `1px 1px 4px 0 ${redBorder}`;
     } else if (inputName === "confirm_password") {
       confirmPasswordCheck();
     } else {
